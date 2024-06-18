@@ -89,7 +89,7 @@ while True:
 
     if keyboard.is_pressed('Ctrl'):
         jogar()
-    
+     
     elif keyboard.is_pressed("space"):
         console = Console()
         Columns(
@@ -97,7 +97,7 @@ while True:
                       style="red  blink",
                       justify="center",),
                       align="center")
-        sys.exit()
+        sys.exit() 
     
  
 

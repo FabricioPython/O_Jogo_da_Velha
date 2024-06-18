@@ -17,7 +17,7 @@ def render_lay(*args):
             Panel(
                 Text("# JOGO DA VELHA #",
                       justify='center', 
-                      style='b r blink'), 
+                      style='b blink bright_white on purple4'), 
                     
             width=23, style="purple4"),
 
