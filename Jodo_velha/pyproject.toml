@@ -1,0 +1,37 @@
+[tool.poetry]
+name = "jodo-velha"
+version = "0.1.0"
+description = ""
+authors = ["FabricioPython <fabricio.mh@outlook.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+numpy = "^2.0.0"
+keyboard = "^0.13.5"
+rich = "^13.7.1"
+
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.4.9"
+taskipy = "^1.13.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.ruff]
+line-length = 79
+
+[tool.ruff.lint]
+preview = true
+select = ['I', 'F', 'E', 'W', 'PL', 'PT']
+
+[tool.ruff.format]
+preview = true
+quote-style = 'single'
+
+[tool.taskipy.tasks]
+lint = 'ruff check . && ruff check . --diff'
+format = 'ruff check . --fix && ruff format .'
+run = 'python ./jodo_velha/jogo_da_velha.py'
